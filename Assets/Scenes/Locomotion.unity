@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2d59d810ba900874295015e507e19f2e, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 939e9a2214e37ec4e8eb4fe85d074704, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -318,8 +318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2138225002}
-  distance: 10
-  height: 5
+  distance: 6
+  height: 3
   heightDamping: 2
   rotationDamping: 3
 --- !u!1 &1976843354
@@ -467,7 +467,7 @@ Transform:
   m_GameObject: {fileID: 2138224998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.93486357, y: 1, z: -9.14146614}
-  m_LocalScale: {x: 1, y: .25, z: 1}
+  m_LocalScale: {x: 1.5, y: .25, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -513,5 +513,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x_rotation: 0
   y_rotation: 0
-  x_sensitivty: 5
-  y_sensitivty: 5
+  x_sensitivty: 8
+  y_sensitivty: 8
