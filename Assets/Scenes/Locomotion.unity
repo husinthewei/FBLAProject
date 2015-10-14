@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -1682,7 +1684,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1948,7 +1949,6 @@ GameObject:
   - 23: {fileID: 2138224999}
   - 143: {fileID: 2138225004}
   - 114: {fileID: 2138225003}
-  - 114: {fileID: 2138225005}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -2024,7 +2024,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship_speed: 0
   resistive_value: .00400000019
-  MovingForward: 0
+  moving_forward: 0
+  rotating_y: 0
+  x_rotation: 0
+  y_rotation: 0
+  x_sensitivity: 2
+  y_sensitivity: 2
+  max_y_rotation: 36
 --- !u!143 &2138225004
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2042,18 +2048,3 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2138225005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138224998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6408e6adb41a8b40ba4f5300b48cdbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_rotation: 0
-  y_rotation: 0
-  x_sensitivty: 8
-  y_sensitivty: 8
