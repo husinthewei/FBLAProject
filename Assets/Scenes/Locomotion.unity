@@ -1302,7 +1302,7 @@ ParticleSystem:
   RotationBySpeedModule:
     enabled: 0
     curve:
-      scalar: .785398185
+      scalar: .785398126
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1558,6 +1558,7 @@ GameObject:
   - 124: {fileID: 991070438}
   - 81: {fileID: 991070437}
   - 114: {fileID: 991070442}
+  - 114: {fileID: 991070443}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1647,6 +1648,18 @@ MonoBehaviour:
   height: 3
   heightDamping: 2
   rotationDamping: 3
+--- !u!114 &991070443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 991070436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ad4c22bfa254243a9229ab00bdad4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPause: 0
 --- !u!1 &1120999400
 GameObject:
   m_ObjectHideFlags: 0
