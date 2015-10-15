@@ -17,7 +17,11 @@ function Update()
         moving_forward = true;
             ship_speed = 0.1;
     }
-    else{
+    if (Input.GetKey("s"))
+    {
+        ship_speed = -0.1;
+    }
+    if(!Input.GetKey("w") && !Input.GetKey("s")){
         moving_forward = false;
         ship_speed = 0.0;
     }
