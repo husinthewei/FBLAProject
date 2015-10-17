@@ -3,9 +3,8 @@ using System.Collections;
 
 public class Two_D_OneReset : MonoBehaviour {
 
-    void onCollisionEnter()
+    void OnTriggerEnter()
     {
-        print("UHHHHH?");
         Application.LoadLevel("2D1");
     }
 }
