@@ -16,21 +16,86 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
-var Planets = [Xenor, Mazka3, Plumona, Fazeon, Vagrant, Talatia, Linithium, Santron];
+var Variance = 500;
 
 function Start () {
+    print("inStart");
     var indexes = findIndexes();
-    for(var i = 0; i < Planets.length; i+=1){
+    //8 is number of planets
+    for(var i = 0; i < 8; i+=1){
         if(i == indexes[0] || i == indexes[1] || i==indexes[2]){
-            var x = Random.value * 250;
-            var y = Random.value * 50;
-            var z = Random.value * 250;
+            var x = 1.96;
+            var y = 1;
+            var z = -9;
+            if(Random.value * 2 ==0)
+                x += Random.value * Variance;
+            else
+                x += Random.value * -Variance;
+
+            y += Random.value * 50;
+
+            if(Random.value * 2 ==0)
+                z += Random.value * -Variance;
+            else
+                z += Random.value * Variance;
+
             //Planets[i].transform.position = Vector3(x, y, z);
+            switch(i){
+                case 0:
+                    Xenor.transform.position = Vector3(x, y, z);
+                    break;
+                case 1:
+                    Mazka3.transform.position = Vector3(x, y, z);
+                    break;
+                case 2:
+                    Plumona.transform.position = Vector3(x, y, z);
+                    break;
+                case 3:
+                    Fazeon.transform.position = Vector3(x, y, z);
+                    break;
+                case 4:
+                    Vagrant.transform.position = Vector3(x, y, z);
+                    break;
+                case 5:
+                    Talatia.transform.position = Vector3(x, y, z);
+                    break;
+                case 6:
+                    Linithium.transform.position = Vector3(x, y, z);
+                    break;
+                case 7:
+                    Santron.transform.position = Vector3(x, y, z);
+                    break;
+            }
         }
         else{
             print("Destroyed" + i);
-            Destroy(Planets[i]);
-            //Planets[i].SetActive(false);            
+            switch(i){
+                case 0:
+                    Destroy(Xenor);
+                    break;
+                case 1:
+                    Destroy(Mazka3);
+                    break;
+                case 2:
+                    Destroy(Plumona);
+                    break;
+                case 3:
+                    Destroy(Fazeon);
+                    break;
+                case 4:
+                    Destroy(Vagrant);
+                    break;
+                case 5:
+                    Destroy(Talatia);
+                    break;
+                case 6:
+                    Destroy(Linithium);
+                    break;
+                case 7:
+                    Destroy(Santron);
+                    break;
+            }
+
         }
 
     }
@@ -52,7 +117,9 @@ function findIndexes(){
             count++;
         }
     }
-
+    print(indexes[0]);
+    print(indexes[1]);
+    print(indexes[2]);
     return indexes;
 }
 function RandomizeLocation () {
