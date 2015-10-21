@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: 939e9a2214e37ec4e8eb4fe85d074704, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1730,7 +1730,6 @@ GameObject:
   - 33: {fileID: 1606687223}
   - 135: {fileID: 1606687222}
   - 23: {fileID: 1606687221}
-  - 114: {fileID: 1606687225}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -1793,17 +1792,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
---- !u!114 &1606687225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1606687220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa19823bb2b9904ebcdfff04a434531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1976843354
 GameObject:
   m_ObjectHideFlags: 0
