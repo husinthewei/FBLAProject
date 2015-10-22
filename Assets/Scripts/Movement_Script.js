@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-private var ship_top_speed : float = 0.35;
+private var ship_top_speed : float = 0.25;
 var ship_speed : float = 0.0;
 var resistive_value: float = 0.01;
 var moving_forward = false;
