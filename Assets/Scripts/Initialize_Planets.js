@@ -16,7 +16,7 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
-var Variance = 500;
+var Variance = 500.00;
 
 function Start () {
     print("inStart");
@@ -24,19 +24,19 @@ function Start () {
     //8 is number of planets
     for(var i = 0; i < 8; i+=1){
         if(i == indexes[0] || i == indexes[1] || i==indexes[2]){
-            var x = 1.96;
-            var y = 1;
-            var z = -9;
-            if(Random.value * 2 ==0)
-                x += Random.value * Variance;
-            else
-                x += Random.value * -Variance;
+            var x = -1.912;
+            var y = -1.109;
+            var z = 10.907;
+           // if(Random.value * 2 ==0)
+             //   x += Random.value * Variance;
+            //else
+                x += Random.value * -(Variance + Variance);
 
             y += Random.value * 50;
 
-            if(Random.value * 2 ==0)
-                z += Random.value * -Variance;
-            else
+           // if(Random.value * 2 ==0)
+               // z += Random.value * -Variance;
+            //else
                 z += Random.value * Variance;
 
             //Planets[i].transform.position = Vector3(x, y, z);
