@@ -15,21 +15,21 @@ var y_sensitivity : float = 5.0;
 var max_y_rotation : float = 90;
 //Returning to forward direction when no buttons pressed
 function Resist(){
+
     if(!moving_forward){
-        ship_speed -= resistive_value;
+        ship_speed -= resistive_value * Time.timeScale;
         if(ship_speed < 0)
             ship_speed = 0;
     }   
     
     if(!rotating_y && y_rotation != 0){
     	if(y_rotation > 0){
-    		y_rotation -= y_sensitivity * 1.5;
+    		y_rotation -= y_sensitivity * 1.5 * Time.timeScale;
     		if(y_rotation < 0)
     			y_rotation = 0;
     	}
-    	
-    if(y_rotation < 0){
-    		y_rotation += y_sensitivity * 1.5;
+    	if(y_rotation < 0){
+    		y_rotation += y_sensitivity * 1.5 * Time.timeScale;
     		if(y_rotation > 0)
     			y_rotation = 0;
     	}
@@ -41,8 +41,10 @@ function Update()
     Resist();
     var controller : CharacterController = GetComponent(CharacterController);
 	var forward = transform.TransformDirection(Vector3.forward);
-	controller.Move(this.gameObject.transform.forward * ship_speed);
+	controller.Move(this.gameObject.transform.forward * ship_speed * Time.timeScale);
 	//Speed Up
+	
+	if(Time.timeScale != 0){
 	if (Input.GetKey("w"))
 	{
 	    moving_forward = true;
@@ -82,4 +84,5 @@ function Update()
 		rotating_y = false;
 	
 	transform.localEulerAngles = Vector3 (y_rotation, x_rotation, 0);
+	}
 }

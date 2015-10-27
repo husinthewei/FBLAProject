@@ -15,11 +15,11 @@ function Update()
     if (Input.GetKey("w"))
     {
         moving_forward = true;
-            ship_speed = 0.1;
+        ship_speed = 0.1 * Time.timeScale;
     }
     if (Input.GetKey("s"))
     {
-        ship_speed = -0.1;
+        ship_speed = -0.1* Time.timeScale;
     }
     if(!Input.GetKey("w") && !Input.GetKey("s")){
         moving_forward = false;
@@ -27,10 +27,10 @@ function Update()
     }
 	
     if(Input.GetKey("a")){
-        ship_speed_z = -0.1;
+        ship_speed_z = -0.1* Time.timeScale;
     }
     if(Input.GetKey("d")){
-        ship_speed_z = 0.1;
+        ship_speed_z = 0.1* Time.timeScale;
     }
     if(!Input.GetKey("a") && !Input.GetKey("d")){
         ship_speed_z = 0.0;
