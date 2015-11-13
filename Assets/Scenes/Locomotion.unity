@@ -169,6 +169,7 @@ GameObject:
   - 33: {fileID: 108261738}
   - 135: {fileID: 108261737}
   - 23: {fileID: 108261736}
+  - 114: {fileID: 108261740}
   m_Layer: 0
   m_Name: Mazka 3
   m_TagString: Untagged
@@ -231,6 +232,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &108261740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108261735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &132354665
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +400,7 @@ GameObject:
   - 33: {fileID: 336802157}
   - 135: {fileID: 336802156}
   - 23: {fileID: 336802155}
+  - 114: {fileID: 336802159}
   m_Layer: 0
   m_Name: Linithium
   m_TagString: Untagged
@@ -450,6 +463,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &336802159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336802154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447876317
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +558,7 @@ GameObject:
   - 33: {fileID: 550254838}
   - 135: {fileID: 550254837}
   - 23: {fileID: 550254836}
+  - 114: {fileID: 550254840}
   m_Layer: 0
   m_Name: Talatia
   m_TagString: Untagged
@@ -596,6 +621,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &550254840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550254835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576649208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,6 +1736,7 @@ GameObject:
   - 33: {fileID: 750241986}
   - 135: {fileID: 750241985}
   - 23: {fileID: 750241984}
+  - 114: {fileID: 750241988}
   m_Layer: 0
   m_Name: Plumona
   m_TagString: Untagged
@@ -1762,6 +1799,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &750241988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750241983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &928354997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,6 +2104,7 @@ GameObject:
   - 33: {fileID: 1171645030}
   - 135: {fileID: 1171645029}
   - 23: {fileID: 1171645028}
+  - 114: {fileID: 1171645032}
   m_Layer: 0
   m_Name: Vagrant
   m_TagString: Untagged
@@ -2118,6 +2167,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1171645032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171645027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1176236464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,6 +2189,7 @@ GameObject:
   - 33: {fileID: 1176236467}
   - 135: {fileID: 1176236466}
   - 23: {fileID: 1176236465}
+  - 114: {fileID: 1176236469}
   m_Layer: 0
   m_Name: Fazeon
   m_TagString: Untagged
@@ -2191,6 +2252,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!114 &1176236469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176236464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562459785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2274,7 @@ GameObject:
   - 33: {fileID: 1562459788}
   - 135: {fileID: 1562459787}
   - 23: {fileID: 1562459786}
+  - 114: {fileID: 1562459791}
   m_Layer: 0
   m_Name: Santron
   m_TagString: Untagged
@@ -2240,7 +2313,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562459785}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -2259,11 +2332,22 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562459785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.11061478, y: 14.6199999, z: -25.2000008}
+  m_LocalPosition: {x: 20, y: 1, z: 1}
   m_LocalScale: {x: 14, y: 14, z: 14}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1562459791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562459785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606687220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2444,7 @@ GameObject:
   - 33: {fileID: 1845325398}
   - 135: {fileID: 1845325397}
   - 23: {fileID: 1845325396}
+  - 114: {fileID: 1845325400}
   m_Layer: 0
   m_Name: Xenor
   m_TagString: Untagged
@@ -2422,6 +2507,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!114 &1845325400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1845325395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431ba5942f770ee4cb3c6edc0c7c96b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976843354
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ function Start () {
                     Linithium.transform.position = Vector3(x, y, z);
                     break;
                 case 7:
-                    Santron.transform.position = Vector3(x, y, z);
+                    //Santron.transform.position = Vector3(x, y, z);
                     break;
             }
         }
@@ -93,7 +93,7 @@ function Start () {
                     Destroy(Linithium);
                     break;
                 case 7:
-                    Destroy(Santron);
+                    //Destroy(Santron);
                     break;
             }
 
