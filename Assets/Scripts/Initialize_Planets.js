@@ -39,9 +39,10 @@ function Start () {
                 z += Random.value * -Variance;
             else
                 z += Random.value * Variance;
-
+			
             //Planets[i].transform.position = Vector3(x, y, z);
             switch(i){
+            	/*
                 case 0:
                     Xenor.transform.position = Vector3(x, y, z);
                     break;
@@ -65,7 +66,7 @@ function Start () {
                     break;
                 case 7:
                     //Santron.transform.position = Vector3(x, y, z);
-                    break;
+                    break;*/
             }
         }
         else{
