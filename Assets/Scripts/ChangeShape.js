@@ -4,7 +4,7 @@ var sphere : GameObject;
 var cube : GameObject;
 sphere = GameObject.Find("Ship");
 cube = GameObject.Find("Cube");
-var controller : CharacterController;
+public static var controller : CharacterController;
 controller = GetComponent.<CharacterController>();
 
 

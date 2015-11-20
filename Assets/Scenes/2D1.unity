@@ -255,7 +255,6 @@ GameObject:
   - 114: {fileID: 1117496854}
   - 114: {fileID: 1117496853}
   - 114: {fileID: 1117496857}
-  - 114: {fileID: 1117496858}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -276,7 +275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 1986653300}
   cube: {fileID: 580575630}
-  controller: {fileID: 0}
 --- !u!114 &1117496854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,18 +332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPause: 0
---- !u!114 &1117496858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1117496852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02abe69a6394a274fb2a3a849d14015e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
 --- !u!1 &1168012755
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +341,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1168012758}
   - 65: {fileID: 1168012757}
+  - 114: {fileID: 1168012756}
   m_Layer: 0
   m_Name: ShapeChecker
   m_TagString: Untagged
@@ -362,6 +349,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1168012756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168012755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f907176fd7f729e4a9758beb288e0bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1117496855}
 --- !u!65 &1168012757
 BoxCollider:
   m_ObjectHideFlags: 0
