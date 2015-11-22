@@ -33,6 +33,9 @@ var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
 //The current inputted answers
 var CurrentAnswer = "";
 
+//for scaling of GUI components
+//var native_width : float = 1920;
+//var native_height : float = 1080;
 
 function Start(){
 	CreateNumbers();
@@ -40,6 +43,11 @@ function Start(){
 
 
 function OnGUI () {
+
+	
+	//var rx : float = Screen.width / native_width;
+    //var ry : float = Screen.height / native_height;
+    //GUI.matrix = Matrix4x4.TRS (Vector3(0, 0, 0), Quaternion.identity, Vector3 (rx, ry, 1));
 	//exit button
      if (GUI.Button(new Rect(10, 20, 100, 20), "Leave Puzzle")) {
          Application.LoadLevel("Locomotion");	
@@ -153,7 +161,7 @@ function OnGUI () {
     	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
     	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(1,1))]);
     }
-    if(TimeRemaining <= 10 && TimeRemaining >= 0){
+    if(TimeRemaining < 10 && TimeRemaining >= 0){
        	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[0]);
     	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
     }
