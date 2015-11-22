@@ -1,13 +1,19 @@
 ﻿#pragma strict
 var health = 100;
 var x = 1320;
-var CurrentQuestion = 0;
+private var CurrentQuestion = 0;
+private var time : float;
+private var seconds: float;
+private var TimeRemaining : float;
 
-var factors = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-var products = [0,0,0,0,0,0,0,0,0,0];
+//randomized factors and the products of them
+private var factors = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+private var products = [0,0,0,0,0,0,0,0,0,0];
 
-var answers = [0,0,0,0,0,0,0,0,0,0];
+//array of all of the inputted answers. Initially constantly randomized for visual effect.
+private var answers = [0,0,0,0,0,0,0,0,0,0];
 
+//All the texture images
 var zero : Texture;
 var one : Texture;
 var two : Texture;
@@ -18,8 +24,13 @@ var six : Texture;
 var seven : Texture;
 var eight : Texture;
 var nine : Texture;
+var check: Texture;
+var clock: Texture;
 
+//array of the texture images
 var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
+
+//The current inputted answers
 var CurrentAnswer = "";
 
 
@@ -29,7 +40,12 @@ function Start(){
 
 
 function OnGUI () {
-
+	//exit button
+     if (GUI.Button(new Rect(10, 20, 100, 20), "Leave Puzzle")) {
+         Application.LoadLevel("Locomotion");	
+     }
+     
+    //Checking key inputs to create the inputted answers
 	var e : Event = Event.current;
     if (Event.current.type == EventType.KeyUp && CurrentQuestion < 10){
     	if(Event.current.keyCode == KeyCode.Alpha0 && (CurrentAnswer).Length <2)
@@ -53,9 +69,11 @@ function OnGUI () {
     	if(Event.current.keyCode == KeyCode.Alpha9 && (CurrentAnswer).Length <2)
     		CurrentAnswer = CurrentAnswer + 9;
     		
+   		//Backspace for answer		
     	if(Event.current.keyCode == KeyCode.Backspace && (CurrentAnswer).Length >0)
     		CurrentAnswer = CurrentAnswer.Substring(0, CurrentAnswer.Length - 1);
     	
+    	//Submitting the answer
     	if(Event.current.keyCode == KeyCode.Return && CurrentQuestion < 10){
     			//Debug.Log("IT IS");
     			if(CurrentAnswer.Length == 0)
@@ -71,16 +89,24 @@ function OnGUI () {
     }
         //Debug.Log("Detected key code: " + e.keyCode);
 
-
+	//When all problems are answered, check the answers
 	if(CurrentQuestion >= 10){
 		var correct = CheckAnswers();
 		if(correct){
 			Debug.Log("You Answered All Correctly");
+			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
+			
 			Application.LoadLevel("Locomotion");	
 		}
 		else{
 			reset();
 		}
+	}
+	//Debug.Log(TimeRemaining);
+	if(TimeRemaining <= 0){
+		time = 0;
+		seconds = 0;
+		reset();
 	}
 	
 	
@@ -116,6 +142,26 @@ function OnGUI () {
     GUI.contentColor = Color.blue;
     //GUI.Rect(100, 100, 100, 100);
     //x-=1;
+    
+    seconds =  parseInt(time % 60);
+    TimeRemaining = 60 - seconds;
+    
+    
+   	 
+    GUI.DrawTexture(Rect (870, 100, 80, 87),clock);
+    if(TimeRemaining >= 10){
+    	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
+    	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(1,1))]);
+    }
+    if(TimeRemaining <= 10 && TimeRemaining >= 0){
+       	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[0]);
+    	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
+    }
+    
+   	//Debug.Log(""+TimeRemaining);
+    
+    //var seconds = guiTime.
+    
 }
 
 function CheckAnswers(){
@@ -143,6 +189,8 @@ function Update(){
 	for(var i = CurrentQuestion; i < answers.length; i++){
 		answers[i] = parseInt(Random.value * 10);
 	}
+	
+	time += Time.deltaTime;
 }
 
 function OnMouseDown(){
