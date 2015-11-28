@@ -1,4 +1,4 @@
-#pragma strict
+﻿#pragma strict
 var Xenor : GameObject;
 var Mazka3 : GameObject;
 var Plumona : GameObject;
@@ -16,16 +16,16 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
-static var Called = false;
+var indexes = [0,0,0];
 
-//keep track of saved planets
-static var indexes = [0,0,0];
+var Called;
 
 function Start () {
+	indexes = Initialize_Planets.getIndexes();
+	getCalled();
     print("inStart");
     //8 is number of planets
-    if(Called == false){
-    findIndexes();
+    if(Called == true){
     for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1] && i!=indexes[2]){
             print("Destroyed" + i);
@@ -60,29 +60,8 @@ function Start () {
 
     }
 }
-Called = true;
 }
 
-function findIndexes(){
-    var first: int;
-    var second: int;
-    var third: int;
-    first = 11;
-    second = 11;
-    third = 11;
-    var count = 0;
-    while(count <3){
-        var num = parseInt(Random.value * 8);
-        if(indexes[0] != num && indexes[1] != num && indexes[2] != num){
-            indexes[count] = num;
-            count++;
-        }
-    }
-    print(indexes[0]);
-    print(indexes[1]);
-    print(indexes[2]);
-    return indexes;
-}
-public static function getIndexes(){
-return indexes;
+function getCalled(){
+Called = Initialize_Planets.Called;
 }
