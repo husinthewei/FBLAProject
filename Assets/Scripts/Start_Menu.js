@@ -1,18 +1,23 @@
-﻿
+﻿var bg : Texture;
+var start : Texture;
+var controls : Texture;
+var quit : Texture;
+
 function OnGUI()
 {
-    var windowRect = Rect(20, 20, 120, 120);
+    var windowRect = Rect(0, 0, 1366, 597);
     windowRect = GUI.Window (0, windowRect, DoMyWindow, "Toast Simulator");
 }
 
 
 function DoMyWindow(windowID)
 {
-    if (GUI.Button(Rect(10, 20, 100, 20), "Start Game"))
+	GUI.DrawTexture(Rect(0,0,1366,597),bg);
+    if (GUI.Button(Rect(481, 262, 399, 90), start))
         Application.LoadLevel("Locomotion");
 
-    if (GUI.Button(Rect(10, 50, 100, 20), "Controls"));
+    if (GUI.Button(Rect(481, 352, 399, 90), controls));
         
-    if (GUI.Button (Rect(10,80,100,20), "Quit"))
+    if (GUI.Button (Rect(481,442,399,90), quit))
         Application.Quit();
 }
