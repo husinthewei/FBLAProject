@@ -19,6 +19,8 @@ Santron = GameObject.Find("Santron");
 var Variance : int;
 //Variance = 400;
 
+Screen.fullScreen = false;
+
 function Start () {
     print("inStart");
     var indexes = findIndexes();
