@@ -1,6 +1,9 @@
 ﻿var isPause = false;
 //public var 
- 
+ function Start(){
+	Screen.SetResolution( 1366, 597, false );
+}
+
  
  function Update () {
   if( Input.GetKeyDown(KeyCode.Escape))

@@ -30,9 +30,10 @@ function Start () {
         else{
             print("Destroyed" + i);
             switch(i){
-                case 0:
-                    Destroy(Xenor);
-                    break;
+            	/*
+                //case 0:
+                //    Destroy(Xenor);
+                //    break;
                 case 1:
                     Destroy(Mazka3);
                     break;
@@ -53,7 +54,7 @@ function Start () {
                     break;
                 case 7:
                     //Destroy(Santron);
-                    break;
+                    break;*/
             }
 
         }
