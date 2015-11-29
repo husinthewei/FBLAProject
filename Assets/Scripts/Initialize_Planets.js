@@ -18,16 +18,13 @@ Santron = GameObject.Find("Santron");
 
 static var Called = false;
 
-//keep track of saved planets
-static var indexes = [0,0,0];
-
 function Start () {
     print("inStart");
     //8 is number of planets
     if(Called == false){
     findIndexes();
     for(var i = 0; i < 8; i+=1){
-        if(i != indexes[0] && i != indexes[1] && i!=indexes[2]){
+        if(i != indexes[0] && i != indexes[1]){
             print("Destroyed" + i);
             switch(i){
                 case 0:
@@ -62,7 +59,7 @@ function Start () {
 }
 Called = true;
 }
-
+var indexes = [0,0];
 function findIndexes(){
     var first: int;
     var second: int;
@@ -71,18 +68,14 @@ function findIndexes(){
     second = 11;
     third = 11;
     var count = 0;
-    while(count <3){
+    while(count <2){
         var num = parseInt(Random.value * 8);
-        if(indexes[0] != num && indexes[1] != num && indexes[2] != num){
+        if(indexes[0] != num && indexes[1] != num){
             indexes[count] = num;
             count++;
         }
     }
     print(indexes[0]);
     print(indexes[1]);
-    print(indexes[2]);
     return indexes;
-}
-public static function getIndexes(){
-return indexes;
 }
