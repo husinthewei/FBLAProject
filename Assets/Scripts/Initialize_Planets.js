@@ -18,6 +18,8 @@ Santron = GameObject.Find("Santron");
 
 static var Called = false;
 
+static var indexes  = [0,0];
+
 function Start () {
     print("inStart");
     //8 is number of planets
@@ -59,7 +61,6 @@ function Start () {
 }
 Called = true;
 }
-var indexes = [0,0];
 function findIndexes(){
     var first: int;
     var second: int;
@@ -78,4 +79,7 @@ function findIndexes(){
     print(indexes[0]);
     print(indexes[1]);
     return indexes;
+}
+function getIndexes(){
+return indexes;
 }
