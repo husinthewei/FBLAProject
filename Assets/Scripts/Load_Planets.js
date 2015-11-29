@@ -21,7 +21,7 @@ var indexes = [0,0,0];
 var Called;
 
 function Start () {
-	indexes = Initialize_Planets.getIndexes();
+	//indexes = Initialize_Planets.getIndexes();
 	getCalled();
     print("inStart");
     //8 is number of planets
