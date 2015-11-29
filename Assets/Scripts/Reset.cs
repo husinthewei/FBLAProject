@@ -20,5 +20,8 @@ public class Reset : MonoBehaviour {
 		else if(Application.loadedLevelName == "2D3"){
 			Application.LoadLevel("2D3");
 		}
+		else if(Application.loadedLevelName == "2D3_to_next"){
+			Application.LoadLevel("2D3_to_next");
+		}
 	}
 }
