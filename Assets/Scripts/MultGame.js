@@ -44,7 +44,8 @@ function Start(){
 
 
 function OnGUI () {
-	
+
+	Debug.Log(Screen.width + " " + Screen.height);
 	//var rx : float = Screen.width / native_width;
     //var ry : float = Screen.height / native_height;
     //GUI.matrix = Matrix4x4.TRS (Vector3(0, 0, 0), Quaternion.identity, Vector3 (rx, ry, 1));
@@ -205,8 +206,6 @@ function Update(){
 	for(var i = CurrentQuestion; i < answers.length; i++){
 		answers[i] = parseInt(Random.value * 10);
 	}
-	
-	Debug.Log("InScript");
 	
 	time += Time.deltaTime;
 }

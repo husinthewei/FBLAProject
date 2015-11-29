@@ -297,7 +297,7 @@ GameObject:
   - 92: {fileID: 1457976329}
   - 124: {fileID: 1457976328}
   - 81: {fileID: 1457976327}
-  - 114: {fileID: 1457976332}
+  - 114: {fileID: 1457976333}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -372,7 +372,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &1457976332
+--- !u!114 &1457976333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -380,34 +380,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457976326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418097df645578e49b8293cf8c788203, type: 3}
+  m_Script: {fileID: 11500000, guid: ab9a91ec1df660b4dbfc0bcb895915ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
   x: 1320
-  zero: {fileID: 2800000, guid: 2e6e7108d17012244aadd0b044bc0e18, type: 3}
-  one: {fileID: 2800000, guid: 1b53ab7e658099e4292347f8a7df2b7b, type: 3}
-  two: {fileID: 2800000, guid: 2ee53b6b58a915e48904a6e510b02a25, type: 3}
-  three: {fileID: 2800000, guid: 2bcf70d517efa524d9d6dc591cdb22eb, type: 3}
-  four: {fileID: 2800000, guid: 7ed6ca1cc82510043b1a27f7a43b0eea, type: 3}
-  five: {fileID: 2800000, guid: 1e3dc38ac9090324cab410cbe3bc79d7, type: 3}
-  six: {fileID: 2800000, guid: 14d99f575993c8c479bc2be08e1276fb, type: 3}
-  seven: {fileID: 2800000, guid: 027d28391afd1964f85c865c6e517f6b, type: 3}
-  eight: {fileID: 2800000, guid: bdf8df010a6748c419c79f94954d43dd, type: 3}
-  nine: {fileID: 2800000, guid: 7246aaf5b42d9e44694de4b34da66047, type: 3}
+  zero: {fileID: 0}
+  one: {fileID: 0}
+  two: {fileID: 0}
+  three: {fileID: 0}
+  four: {fileID: 0}
+  five: {fileID: 0}
+  six: {fileID: 0}
+  seven: {fileID: 0}
+  eight: {fileID: 0}
+  nine: {fileID: 0}
   check: {fileID: 2800000, guid: 510fade86a7bbe74ca04183b1b1eba3d, type: 3}
   wrong: {fileID: 2800000, guid: cd90d2175620a554893bf37c1d705370, type: 3}
   nums:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 2e6e7108d17012244aadd0b044bc0e18, type: 3}
+  - {fileID: 2800000, guid: 1b53ab7e658099e4292347f8a7df2b7b, type: 3}
+  - {fileID: 2800000, guid: 2ee53b6b58a915e48904a6e510b02a25, type: 3}
+  - {fileID: 2800000, guid: 2bcf70d517efa524d9d6dc591cdb22eb, type: 3}
+  - {fileID: 2800000, guid: 7ed6ca1cc82510043b1a27f7a43b0eea, type: 3}
+  - {fileID: 2800000, guid: 1e3dc38ac9090324cab410cbe3bc79d7, type: 3}
+  - {fileID: 2800000, guid: 14d99f575993c8c479bc2be08e1276fb, type: 3}
+  - {fileID: 2800000, guid: 027d28391afd1964f85c865c6e517f6b, type: 3}
+  - {fileID: 2800000, guid: bdf8df010a6748c419c79f94954d43dd, type: 3}
+  - {fileID: 2800000, guid: 7246aaf5b42d9e44694de4b34da66047, type: 3}
   CurrentAnswer: 
 --- !u!1 &2024707295
 GameObject:
