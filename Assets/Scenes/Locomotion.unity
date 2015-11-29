@@ -1960,6 +1960,7 @@ MonoBehaviour:
   Talatia: {fileID: 0}
   Linithium: {fileID: 0}
   Santron: {fileID: 0}
+  indexes: 0000000000000000
 --- !u!114 &991070444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1980,18 +1981,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 991070436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd5f32ba4ebf6442a89853b60293abb, type: 3}
+  m_Script: {fileID: 11500000, guid: f2005423d8d5c214aa8666ab7d6cc0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xenor: {fileID: 0}
-  Mazka3: {fileID: 0}
-  Plumona: {fileID: 0}
-  Fazeon: {fileID: 0}
-  Vagrant: {fileID: 0}
-  Talatia: {fileID: 0}
-  Linithium: {fileID: 0}
-  Santron: {fileID: 0}
-  indexes: 000000000000000000000000
+  Portal: {fileID: 1606687220}
 --- !u!1 &1120999400
 GameObject:
   m_ObjectHideFlags: 0
