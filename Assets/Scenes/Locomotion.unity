@@ -1661,6 +1661,7 @@ MonoBehaviour:
   Talatia: {fileID: 0}
   Linithium: {fileID: 0}
   Santron: {fileID: 0}
+  indexes: 0000000000000000
 --- !u!114 &991070444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1808,7 @@ GameObject:
   - 33: {fileID: 1176236467}
   - 135: {fileID: 1176236466}
   - 23: {fileID: 1176236465}
+  - 114: {fileID: 1176236469}
   m_Layer: 0
   m_Name: Fazeon
   m_TagString: Untagged
@@ -1845,7 +1847,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176236464}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -1869,6 +1871,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1176236469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176236464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0363992e2955aeb498a68f1516acb3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562459785
 GameObject:
   m_ObjectHideFlags: 0
