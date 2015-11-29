@@ -17,9 +17,15 @@ Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
 static var Called = false;
+static var indexes = [0,0];
+static var OneDone = ActivatePortal.getOneDone();
+static var TwoDone = ActivatePortal.getTwoDone();
 
 function Start () {
     print("inStart");
+    //reset OneDone and TwoDone from previous level
+    OneDone = false;
+    TwoDone = false;
     //8 is number of planets
     if(Called == false){
     findIndexes();
@@ -59,7 +65,6 @@ function Start () {
 }
 Called = true;
 }
-var indexes = [0,0];
 function findIndexes(){
     var first: int;
     var second: int;
@@ -78,4 +83,8 @@ function findIndexes(){
     print(indexes[0]);
     print(indexes[1]);
     return indexes;
+}
+
+public static function getIndexes(){
+return indexes;
 }

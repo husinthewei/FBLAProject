@@ -1552,6 +1552,8 @@ GameObject:
   - 114: {fileID: 991070442}
   - 114: {fileID: 991070443}
   - 114: {fileID: 991070444}
+  - 114: {fileID: 991070446}
+  - 114: {fileID: 991070445}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1661,7 +1663,6 @@ MonoBehaviour:
   Talatia: {fileID: 0}
   Linithium: {fileID: 0}
   Santron: {fileID: 0}
-  indexes: 0000000000000000
 --- !u!114 &991070444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1674,6 +1675,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPause: 0
+--- !u!114 &991070445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 991070436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2005423d8d5c214aa8666ab7d6cc0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portal: {fileID: 0}
+--- !u!114 &991070446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 991070436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd5f32ba4ebf6442a89853b60293abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Xenor: {fileID: 0}
+  Mazka3: {fileID: 0}
+  Plumona: {fileID: 0}
+  Fazeon: {fileID: 0}
+  Vagrant: {fileID: 0}
+  Talatia: {fileID: 0}
+  Linithium: {fileID: 0}
+  Santron: {fileID: 0}
+  indexes: 0000000000000000
 --- !u!1001 &1139094872
 Prefab:
   m_ObjectHideFlags: 0
