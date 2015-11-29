@@ -21,13 +21,13 @@ function Update(){
         if(sphere.activeSelf == true){
             sphere.SetActive(false);
             cube.SetActive(true);
-	        controller.radius = 0.01;
+	        controller.radius = 0.0001;
 
 
         }else if(horizCube.activeSelf == true){
             horizCube.SetActive(false);
             cube.SetActive(true);
-            controller.radius = 0.01;
+            controller.radius = 0.0001;
 
         }
         }
@@ -36,12 +36,12 @@ function Update(){
         if(sphere.activeSelf == true){
             sphere.SetActive(false);
             horizCube.SetActive(true);
-	        controller.radius = 0.1;
+	        controller.radius = 0.001;
         
         }else if(cube.activeSelf == true){
             cube.SetActive(false);
             horizCube.SetActive(true);
-            controller.radius = 0.1;
+            controller.radius = 0.001;
         }
         }
         //switch to sphere
