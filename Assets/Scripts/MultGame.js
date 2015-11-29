@@ -5,7 +5,7 @@ private var CurrentQuestion = 0;
 private var time : float;
 private var seconds: float;
 private var TimeRemaining : float;
-
+TimeRemaining = 60;
 //randomized factors and the products of them
 private var factors = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 private var products = [0,0,0,0,0,0,0,0,0,0];
@@ -25,7 +25,7 @@ var seven : Texture;
 var eight : Texture;
 var nine : Texture;
 var check: Texture;
-var clock: Texture;
+var wrong: Texture;
 
 //array of the texture images
 var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
@@ -38,6 +38,7 @@ var CurrentAnswer = "";
 
 function Start(){
 	//Screen.SetResolution( 1366, 597, false );
+	reset();
 	CreateNumbers();
 }
 
@@ -49,7 +50,8 @@ function OnGUI () {
     //var ry : float = Screen.height / native_height;
     //GUI.matrix = Matrix4x4.TRS (Vector3(0, 0, 0), Quaternion.identity, Vector3 (rx, ry, 1));
 	//exit button
-     if (GUI.Button(new Rect(10, 20, 100, 20), "Leave Puzzle")) {
+     if (GUI.Button(new Rect(10, 20, 100, 25), "Exit Puzzle")) {
+     
          Application.LoadLevel("Locomotion");	
      }
      
@@ -107,39 +109,42 @@ function OnGUI () {
 			Application.LoadLevel("Locomotion");	
 		}
 		else{
-			reset();
+			GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
+			Application.LoadLevel("MultiplicationGame");
 		}
 	}
 	//Debug.Log(TimeRemaining);
 	if(TimeRemaining <= 0){
-		time = 0;
-		seconds = 0;
-		reset();
+		GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
+		Application.LoadLevel("MultiplicationGame");
 	}
 	
 	
 	var string = "";
+	
+	//drawing current code
 	for(var i = 0; i < answers.length; i++){
 		if(("" + answers[i]).Length == 1)
-			GUI.DrawTexture(Rect (495 + 50*i, 260, 20, 30),nums[answers[i]]);
+			GUI.DrawTexture(Rect (462 + 50*i, 185, 20, 30),nums[answers[i]]);
 		if(("" + answers[i]).Length == 2){
-			GUI.DrawTexture(Rect (495 + 50*i, 260, 20, 30),nums[parseInt((""+answers[i]).Substring(0,1))]);
-			GUI.DrawTexture(Rect (495 + 50*i + 18, 260, 20, 30),nums[parseInt((""+answers[i]).Substring(1,1))]);
+			GUI.DrawTexture(Rect (456 + 50*i, 185, 20, 30),nums[parseInt((""+answers[i]).Substring(0,1))]);
+			GUI.DrawTexture(Rect (456 + 50*i + 16, 185, 20, 30),nums[parseInt((""+answers[i]).Substring(1,1))]);
 			}
 	}
 	
+	//drawing factors
 	if(CurrentQuestion < 10){
-		GUI.DrawTexture(new Rect(395, 360, 60, 90), nums[factors[2 * CurrentQuestion]], ScaleMode.ScaleToFit, true);
-		GUI.DrawTexture(new Rect(500, 360, 60, 90), nums[factors[2 * CurrentQuestion + 1]], ScaleMode.ScaleToFit, true);
+		GUI.DrawTexture(new Rect(395, 298, 60, 90), nums[factors[2 * CurrentQuestion]], ScaleMode.ScaleToFit, true);
+		GUI.DrawTexture(new Rect(520, 298, 60, 90), nums[factors[2 * CurrentQuestion + 1]], ScaleMode.ScaleToFit, true);
 	}
 	
 	Debug.Log(CurrentAnswer);
 	if(CurrentAnswer.Length == 1){
-		GUI.DrawTexture(new Rect(700, 360, 60, 90), nums[parseInt(CurrentAnswer.Substring(0,1))], ScaleMode.ScaleToFit, true);
+		GUI.DrawTexture(new Rect(640, 298, 60, 90), nums[parseInt(CurrentAnswer.Substring(0,1))], ScaleMode.ScaleToFit, true);
 		}
 	if(CurrentAnswer.Length == 2){
-		GUI.DrawTexture(new Rect(700, 360, 60, 90), nums[parseInt(CurrentAnswer.Substring(0,1))], ScaleMode.ScaleToFit, true);
-		GUI.DrawTexture(new Rect(740, 360, 60, 90), nums[parseInt(CurrentAnswer.Substring(1,1))], ScaleMode.ScaleToFit, true);
+		GUI.DrawTexture(new Rect(640, 298, 60, 90), nums[parseInt(CurrentAnswer.Substring(0,1))], ScaleMode.ScaleToFit, true);
+		GUI.DrawTexture(new Rect(680, 298, 60, 90), nums[parseInt(CurrentAnswer.Substring(1,1))], ScaleMode.ScaleToFit, true);
 		}
 		
 	//GUI.DrawTexture(Rect (495, 500, 60, 90),nums[factors[2 * CurrentQuestion+1]]);
@@ -156,14 +161,13 @@ function OnGUI () {
     
     
    	 
-    GUI.DrawTexture(Rect (870, 100, 80, 87),clock);
     if(TimeRemaining >= 10){
-    	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
-    	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(1,1))]);
+    	GUI.DrawTexture(Rect (780, 130, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
+    	GUI.DrawTexture(Rect (795, 130, 20, 30),nums[parseInt((""+TimeRemaining).Substring(1,1))]);
     }
     if(TimeRemaining < 10 && TimeRemaining >= 0){
-       	GUI.DrawTexture(Rect (890, 190, 20, 30),nums[0]);
-    	GUI.DrawTexture(Rect (905, 190, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
+       	GUI.DrawTexture(Rect (780, 130, 20, 30),nums[0]);
+    	GUI.DrawTexture(Rect (795, 130, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
     }
     
    	//Debug.Log(""+TimeRemaining);
@@ -186,8 +190,13 @@ function CheckAnswers(){
 		return false;
 	
 }
+function delayTime(){
+	yield WaitForSeconds(1);
+}
 
 function reset(){
+	time = 0;
+	seconds = 0;
 	CurrentQuestion = 0;
 	answers = [0,0,0,0,0,0,0,0,0,0];
 	CreateNumbers();
@@ -201,9 +210,7 @@ function Update(){
 	time += Time.deltaTime;
 }
 
-function OnMouseDown(){
-	print('wassup');
-}
+
 function CreateNumbers(){
 	for(var i = 0; i < factors.length; i++){
 		factors[i] = parseInt(Random.value * 10);

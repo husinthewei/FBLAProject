@@ -121,7 +121,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 8808bad4356372c489a173e95e821577, type: 3}
+  m_Texture: {fileID: 2800000, guid: 575602e5bea6c5e4d9b3a8882296ffe8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   eight: {fileID: 2800000, guid: a5e44572a3e94694eacc78931df8e6fa, type: 3}
   nine: {fileID: 2800000, guid: a79edf1acd02fe44f815fc96796b49d3, type: 3}
   check: {fileID: 2800000, guid: 5105a69a1630dac4c80af2ce096226ff, type: 3}
-  clock: {fileID: 2800000, guid: 8cfb236eea2652140ae854e15a1b5279, type: 3}
+  wrong: {fileID: 2800000, guid: ab9a9d65939bba140b4df7c1c0de37ce, type: 3}
   nums:
   - {fileID: 2800000, guid: d6812232bf4dd754aae0ab68d9dafc81, type: 3}
   - {fileID: 2800000, guid: db89c171361e88d46a1776b3151a589e, type: 3}
