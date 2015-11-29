@@ -1550,7 +1550,6 @@ GameObject:
   - 124: {fileID: 991070438}
   - 81: {fileID: 991070437}
   - 114: {fileID: 991070442}
-  - 114: {fileID: 991070443}
   - 114: {fileID: 991070444}
   m_Layer: 0
   m_Name: Main Camera
@@ -1642,25 +1641,6 @@ MonoBehaviour:
   height: 3
   heightDamping: 2
   rotationDamping: 3
---- !u!114 &991070443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 991070436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49bb62a477a499848b7abcc7ab41e30d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Xenor: {fileID: 0}
-  Mazka3: {fileID: 0}
-  Plumona: {fileID: 0}
-  Fazeon: {fileID: 0}
-  Vagrant: {fileID: 0}
-  Talatia: {fileID: 0}
-  Linithium: {fileID: 0}
-  Santron: {fileID: 0}
 --- !u!114 &991070444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1787,7 @@ GameObject:
   - 33: {fileID: 1176236467}
   - 135: {fileID: 1176236466}
   - 23: {fileID: 1176236465}
+  - 114: {fileID: 1176236469}
   m_Layer: 0
   m_Name: Fazeon
   m_TagString: Untagged
@@ -1845,7 +1826,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176236464}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -1869,6 +1850,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1176236469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176236464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4941754c208e03c459c0722a97f7e2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562459785
 GameObject:
   m_ObjectHideFlags: 0
