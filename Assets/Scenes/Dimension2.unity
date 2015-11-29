@@ -2020,14 +2020,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bb62a477a499848b7abcc7ab41e30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xenor: {fileID: 0}
-  Mazka3: {fileID: 0}
-  Plumona: {fileID: 0}
-  Fazeon: {fileID: 0}
-  Vagrant: {fileID: 0}
-  Talatia: {fileID: 0}
-  Linithium: {fileID: 0}
-  Santron: {fileID: 0}
+  Xenor: {fileID: 712101257}
+  Mazka3: {fileID: 1049642372}
+  Plumona: {fileID: 1557634813}
+  Fazeon: {fileID: 388799381}
+  Vagrant: {fileID: 1616333958}
+  Talatia: {fileID: 1500650337}
+  Linithium: {fileID: 1148115072}
+  Santron: {fileID: 601149084}
 --- !u!114 &991070444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2005423d8d5c214aa8666ab7d6cc0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portal: {fileID: 0}
+  Portal: {fileID: 1606687220}
 --- !u!114 &991070445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,14 +2051,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd5f32ba4ebf6442a89853b60293abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xenor: {fileID: 0}
-  Mazka3: {fileID: 0}
-  Plumona: {fileID: 0}
-  Fazeon: {fileID: 0}
-  Vagrant: {fileID: 0}
-  Talatia: {fileID: 0}
-  Linithium: {fileID: 0}
-  Santron: {fileID: 0}
+  Xenor: {fileID: 712101257}
+  Mazka3: {fileID: 1049642372}
+  Plumona: {fileID: 1557634813}
+  Fazeon: {fileID: 388799381}
+  Vagrant: {fileID: 1616333958}
+  Talatia: {fileID: 1500650337}
+  Linithium: {fileID: 1148115072}
+  Santron: {fileID: 601149084}
   indexes: 0000000000000000
 --- !u!1 &1049642372
 GameObject:
