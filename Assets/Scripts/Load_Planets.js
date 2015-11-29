@@ -16,18 +16,18 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
-var indexes = [0,0,0];
+var indexes = [0,0];
 
 var Called;
 
 function Start () {
-	//indexes = Initialize_Planets.getIndexes();
+	indexes = Initialize_Planets.getIndexes();
 	getCalled();
     print("inStart");
     //8 is number of planets
     if(Called == true){
     for(var i = 0; i < 8; i+=1){
-        if(i != indexes[0] && i != indexes[1] && i!=indexes[2]){
+        if(i != indexes[0] && i != indexes[1]){
             print("Destroyed" + i);
             switch(i){
                 case 0:

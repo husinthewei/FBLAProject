@@ -80,6 +80,6 @@ function findIndexes(){
     print(indexes[1]);
     return indexes;
 }
-function getIndexes(){
+public static function getIndexes(){
 return indexes;
 }
