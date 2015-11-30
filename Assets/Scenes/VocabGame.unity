@@ -65,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -84,9 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!127 &5
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!1 &204528752
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +115,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 2800000, guid: f784f344dd017834f89d1b1a25c1beb9, type: 3}
   m_UVRect:
     serializedVersion: 2
@@ -216,6 +220,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -274,6 +279,9 @@ MonoBehaviour:
   - full of complaints; complaining
   - to reject as having no authority or binding force
   - to reecho or resound
+  time: 0
+  seconds: 0
+  TimeRemaining: 0
   restartDelay: 0
   wrongDelay: 0
   currentQuestion: 0
@@ -302,6 +310,7 @@ MonoBehaviour:
   nine: {fileID: 2800000, guid: 7246aaf5b42d9e44694de4b34da66047, type: 3}
   check: {fileID: 2800000, guid: 510fade86a7bbe74ca04183b1b1eba3d, type: 3}
   wrong: {fileID: 2800000, guid: cd90d2175620a554893bf37c1d705370, type: 3}
+  done: 0
   nums:
   - {fileID: 2800000, guid: 2e6e7108d17012244aadd0b044bc0e18, type: 3}
   - {fileID: 2800000, guid: 1b53ab7e658099e4292347f8a7df2b7b, type: 3}

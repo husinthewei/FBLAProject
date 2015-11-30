@@ -83,6 +83,7 @@ function OnGUI(){
     		Application.LoadLevel("Locomotion");
     		}
     	else{
+    		reset();
     		wrongDelay = 0;
     		restartDelay = 200;	
     		done = false;
@@ -109,8 +110,8 @@ function OnGUI(){
      	GUI.Label (Rect (390, 200, 1500, 300), Questions[currentQuestion], labStyle);
      	
      	//Score goal
-     	GUI.Label (Rect (915, 120, 300, 300), CorrectAnswers + "/10", labStyle);
-     	GUI.Label (Rect (900, 140, 300, 300), "Goal: 8/10", labStyle);		
+     	GUI.Label (Rect (940, 120, 300, 300), CorrectAnswers + "/" + currentQuestion, labStyle);
+     	GUI.Label (Rect (900, 140, 300, 300), "Goal: 8+/10", labStyle);		
      	if(TimeRemaining >= 10){
     	GUI.DrawTexture(Rect (780, 130, 20, 30),nums[parseInt((""+TimeRemaining).Substring(0,1))]);
     	GUI.DrawTexture(Rect (795, 130, 20, 30),nums[parseInt((""+TimeRemaining).Substring(1,1))]);
@@ -175,6 +176,7 @@ function OnGUI(){
 	if(restartDelay != 0){
 		Answer = -1;
 		restartDelay -=1;
+		reset();
 		GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
 		if(restartDelay == 0)
 			Application.LoadLevel("VocabGame");
@@ -200,8 +202,8 @@ function OnGUI(){
      GUI.Label (Rect (390, 200, 1500, 300), Questions[currentQuestion], labStyle);
      
      //Score goal
-     GUI.Label (Rect (915, 120, 300, 300), CorrectAnswers + "/10", labStyle);
-     GUI.Label (Rect (900, 140, 300, 300), "Goal: 8/10", labStyle);
+     GUI.Label (Rect (940, 120, 300, 300), CorrectAnswers + "/" + currentQuestion, labStyle);
+     GUI.Label (Rect (900, 140, 300, 300), "Goal: 8+/10", labStyle);
           
      //Buttons for choices
      if (GUI.Button(new Rect(435, 280, 240, 100), ScrambledAnswers[currentQuestion][0], ChoiceStyle)) 
@@ -281,6 +283,16 @@ function pickWords(){
 //	}
 	
 	
+}
+
+function reset(){
+	TimeRemaining = 59;
+
+	restartDelay = 0;
+	wrongDelay = 0;
+	currentQuestion = 0;
+	Answer = -1;
+	CorrectAnswers = 0;	
 }
 
 function QuestionsContains(obj){
