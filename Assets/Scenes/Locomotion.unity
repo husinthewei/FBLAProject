@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -3802,6 +3804,7 @@ GameObject:
   - 114: {fileID: 991070444}
   - 114: {fileID: 991070446}
   - 114: {fileID: 991070445}
+  - 114: {fileID: 991070447}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3858,7 +3861,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -3955,6 +3957,21 @@ MonoBehaviour:
   Linithium: {fileID: 336802154}
   Santron: {fileID: 1562459785}
   indexes: 0000000000000000
+--- !u!114 &991070447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 991070436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dfde4a658fcd44ba51ec0349240d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  length: 0
+  bar: {fileID: 2800000, guid: 99cbe83a9db00f849b8ee701ac2ab8a5, type: 3}
+  outline: {fileID: 2800000, guid: d211476551089124baea5f60f753dc1e, type: 3}
 --- !u!1001 &1139094872
 Prefab:
   m_ObjectHideFlags: 0
