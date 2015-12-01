@@ -17,7 +17,7 @@ Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
 static var Called = false;
-static var indexes = [0,0];
+static var indexes = [-1,-1];
 static var OneDone = ActivatePortal.getOneDone();
 static var TwoDone = ActivatePortal.getTwoDone();
 
