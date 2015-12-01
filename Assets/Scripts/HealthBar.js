@@ -1,5 +1,5 @@
 ﻿#pragma strict
-var health : float;
+static var health : float;
 var length : float;
 
 health = 100;
