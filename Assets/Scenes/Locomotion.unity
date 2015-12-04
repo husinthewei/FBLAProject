@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -98,6 +96,7 @@ GameObject:
   - 33: {fileID: 108261738}
   - 135: {fileID: 108261737}
   - 23: {fileID: 108261736}
+  - 114: {fileID: 108261740}
   m_Layer: 0
   m_Name: Mazka 3
   m_TagString: Untagged
@@ -136,7 +135,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108261735}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -160,6 +159,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &108261740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108261735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af89997aa27b5a146ad529eb874d8864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336802154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,7 +3699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship_speed: 0
-  resistive_value: .0399999991
+  resistive_value: .0500000007
   moving_forward: 0
   rotating_y: 0
   x_rotation: 0
@@ -3725,6 +3735,7 @@ GameObject:
   - 33: {fileID: 750241986}
   - 135: {fileID: 750241985}
   - 23: {fileID: 750241984}
+  - 114: {fileID: 750241988}
   m_Layer: 0
   m_Name: Plumona
   m_TagString: Untagged
@@ -3763,7 +3774,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750241983}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -3787,6 +3798,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &750241988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750241983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b9638673754b64ebf4da7bbffbd1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &991070436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,6 +3883,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

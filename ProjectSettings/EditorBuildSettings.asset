@@ -25,3 +25,7 @@ EditorBuildSettings:
     path: Assets/Scenes/VocabGame.unity
   - enabled: 1
     path: Assets/Scenes/ScienceGame.unity
+  - enabled: 1
+    path: Assets/Scenes/PercentGame.unity
+  - enabled: 1
+    path: Assets/Scenes/GrammarGame.unity
