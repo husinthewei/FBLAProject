@@ -18,6 +18,7 @@ var Answer = -1;
 
 var CorrectAnswers = 0;
 
+static var Donehist;
 
 //Questions and answers that will be used (10)
 var Questions = ["","","","","","","","","",""];
@@ -81,6 +82,7 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
+			Donehist = true;
     		Application.LoadLevel("Locomotion");
     		}
     	else{
