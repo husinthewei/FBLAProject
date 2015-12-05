@@ -11,6 +11,8 @@ var seconds: float;
 var TimeRemaining : float;
 TimeRemaining = 59;
 
+static var Donesci;
+
 var restartDelay = 0;
 var wrongDelay = 0;
 var currentQuestion = 0;
@@ -84,12 +86,7 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-			if(ActivatePortal.getOneDone == true){
-			ActivatePortal.setTwoDone(true);
-			}
-			if(ActivatePortal.getOneDone != true){
-			ActivatePortal.setOneDone(true);
-			}
+			Donesci = true;
 
 			Application.LoadLevel("Locomotion");
 			}

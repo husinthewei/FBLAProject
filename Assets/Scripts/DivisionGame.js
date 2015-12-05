@@ -11,6 +11,7 @@ private var products = [0,0,0,0,0,0,0,0,0,0];
 //array of all of the inputted answers. Initially constantly randomized for visual effect.
 private var answers = [0,0,0,0,0,0,0,0,0,0];
 
+static var Donediv;
 //All the texture images
 var zero : Texture;
 var one : Texture;
@@ -100,12 +101,7 @@ function OnGUI () {
 		if(correct){
 			Debug.Log("You Answered All Correctly");
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-			if(ActivatePortal.getOneDone == true){
-			ActivatePortal.setTwoDone(true);
-			}
-			if(ActivatePortal.getOneDone != true){
-			ActivatePortal.setOneDone(true);
-			}
+			Donediv = true;
 			
 			Application.LoadLevel("Locomotion");	
 		}

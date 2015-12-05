@@ -23,9 +23,7 @@ function Start () {
     print("inStart");
     //8 is number of planets
     if(Called == false){
-        //reset OneDone and TwoDone from previous level
-    //ActivatePortal.OneDone = false;
-    //ActivatePortal.TwoDone = false;
+
     findIndexes();
     for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
