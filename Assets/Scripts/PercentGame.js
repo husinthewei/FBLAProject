@@ -44,6 +44,7 @@ var done = false;
 //array of the texture images
 var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
 
+
 function Start () {
 	reset();
 	pickQuestions();
@@ -82,6 +83,12 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
+			if(ActivatePortal.getOneDone == true){
+			ActivatePortal.setTwoDone(true);
+			}
+			if(ActivatePortal.getOneDone != true){
+			ActivatePortal.setOneDone(true);
+			}
     		Application.LoadLevel("Locomotion");
     		}
     	else{
@@ -130,7 +137,6 @@ function OnGUI(){
     			corInd = z;
     	}
     	
-    	Debug.Log(corInd + "    " + Answer);
     	if(corInd == 0)
     		if (GUI.Button(new Rect(435, 280, 240, 100), ScrambledAnswers[currentQuestion][0], ChoiceStyle)){}
 	    if(Answer == 0)
@@ -279,7 +285,6 @@ function pickQuestions(){
 			temp = "";
 			//makes sure each choice is unique
 			while(ScrambledAnswers[j][0] == temp || ScrambledAnswers[j][1] == temp || ScrambledAnswers[j][2] == temp || ScrambledAnswers[j][3] == temp){
-				Debug.Log(j + "            " + Answers.length);
 				temp = Answers[j][parseInt(Random.value * 4)];
 			}
 			ScrambledAnswers[j][k] = temp; 

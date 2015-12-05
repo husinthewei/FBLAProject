@@ -150,6 +150,7 @@ GameObject:
   - 33: {fileID: 108261738}
   - 135: {fileID: 108261737}
   - 23: {fileID: 108261736}
+  - 114: {fileID: 108261740}
   m_Layer: 0
   m_Name: Mazka 3
   m_TagString: Untagged
@@ -188,7 +189,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108261735}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -212,6 +213,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!114 &108261740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108261735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af89997aa27b5a146ad529eb874d8864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114425445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,7 +2923,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550254835}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -4208,6 +4220,7 @@ GameObject:
   - 33: {fileID: 750241986}
   - 135: {fileID: 750241985}
   - 23: {fileID: 750241984}
+  - 114: {fileID: 750241988}
   m_Layer: 0
   m_Name: Plumona
   m_TagString: Untagged
@@ -4246,7 +4259,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750241983}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -4270,6 +4283,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!114 &750241988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750241983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b9638673754b64ebf4da7bbffbd1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &764261538
 Prefab:
   m_ObjectHideFlags: 0
@@ -4447,8 +4471,8 @@ GameObject:
   - 114: {fileID: 991070443}
   - 114: {fileID: 991070444}
   - 114: {fileID: 991070446}
-  - 114: {fileID: 991070445}
   - 114: {fileID: 991070447}
+  - 114: {fileID: 991070445}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4581,6 +4605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2005423d8d5c214aa8666ab7d6cc0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  one: 0
+  two: 0
   Portal: {fileID: 1606687220}
 --- !u!114 &991070446
 MonoBehaviour:
@@ -4769,7 +4795,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1171645027}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5

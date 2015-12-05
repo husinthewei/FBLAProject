@@ -30,6 +30,7 @@ var wrong: Texture;
 //array of the texture images
 var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
 
+
 //The current inputted answers
 var CurrentAnswer = "";
 //for scaling of GUI components
@@ -105,6 +106,12 @@ function OnGUI () {
 		if(correct){
 			Debug.Log("You Answered All Correctly");
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
+			if(ActivatePortal.getOneDone == true){
+			ActivatePortal.setTwoDone(true);
+			}
+			if(ActivatePortal.getOneDone != true){
+			ActivatePortal.setOneDone(true);
+			}
 			
 			Application.LoadLevel("Locomotion");	
 		}
