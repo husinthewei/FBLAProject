@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -2502,6 +2504,7 @@ GameObject:
   - 33: {fileID: 550254838}
   - 135: {fileID: 550254837}
   - 23: {fileID: 550254836}
+  - 114: {fileID: 550254840}
   m_Layer: 0
   m_Name: Talatia
   m_TagString: Untagged
@@ -2540,7 +2543,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550254835}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -2564,6 +2567,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &550254840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550254835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6da68b326f420b4187ab3a2f05b25c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576649208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,7 +3897,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -4056,6 +4069,7 @@ GameObject:
   - 33: {fileID: 1171645030}
   - 135: {fileID: 1171645029}
   - 23: {fileID: 1171645028}
+  - 114: {fileID: 1171645032}
   m_Layer: 0
   m_Name: Vagrant
   m_TagString: Untagged
@@ -4094,7 +4108,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1171645027}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -4118,6 +4132,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1171645032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171645027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c4f9a74977a2d4c9f5eb424e09d111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1176236464
 GameObject:
   m_ObjectHideFlags: 0
