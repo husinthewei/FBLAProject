@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/Scenes/UnitGame.unity
   - enabled: 1
     path: Assets/Scenes/HistoryGame.unity
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
