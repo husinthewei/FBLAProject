@@ -19,6 +19,8 @@ var Answer = -1;
 var CorrectAnswers = 0;
 
 
+static var Donevoc;
+
 //Questions and answers that will be used (10)
 var Questions = ["","","","","","","","","",""];
 var Answers = [["","","",""],["","","",""],["","","",""],["","","",""],["","","",""],["","","",""],["","","",""],["","","",""],["","","",""],["","","",""]];
@@ -82,12 +84,8 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-			if(ActivatePortal.getOneDone == true){
-			ActivatePortal.setTwoDone(true);
-			}
-			if(ActivatePortal.getOneDone != true){
-			ActivatePortal.setOneDone(true);
-			}
+			Donevoc = true; 
+			
 			Application.LoadLevel("Locomotion");
 			}
     	else{

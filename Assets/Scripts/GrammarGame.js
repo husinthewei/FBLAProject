@@ -17,7 +17,7 @@ var currentQuestion = 0;
 var Answer = -1;
 
 var CorrectAnswers = 0;
-
+ static var Donegram;
 
 
 
@@ -83,12 +83,7 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-			if(ActivatePortal.getOneDone == true){
-			ActivatePortal.setTwoDone(true);
-			}
-			if(ActivatePortal.getOneDone != true){
-			ActivatePortal.setOneDone(true);
-			}
+			Donegram = true;
 
     		Application.LoadLevel("Locomotion");
     		}

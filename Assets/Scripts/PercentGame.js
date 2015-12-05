@@ -14,6 +14,8 @@ var restartDelay = 0;
 var wrongDelay = 0;
 var currentQuestion = 0;
 
+static var Doneper;
+
 //Currently no answer
 var Answer = -1;
 
@@ -83,12 +85,7 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-			if(ActivatePortal.getOneDone == true){
-			ActivatePortal.setTwoDone(true);
-			}
-			if(ActivatePortal.getOneDone != true){
-			ActivatePortal.setOneDone(true);
-			}
+			Doneper = true;
     		Application.LoadLevel("Locomotion");
     		}
     	else{
