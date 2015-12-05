@@ -1,6 +1,5 @@
 ﻿#pragma strict
 var Portal : GameObject;
-var Called;
 Portal = GameObject.Find("Portal");
 var count = 0;
 var indexes = [0,0];
@@ -9,7 +8,6 @@ function Start () {
 if(count!=2){
 Portal.SetActive(false);
 }
-getCalled();
 check();
 }
 
@@ -54,7 +52,7 @@ for(var i = 0; i < 8; i+=1){
                     }
                     break;
                 case 7:
-                    if(MultiplicationGame.Donemult == true){
+                    if(MultGame.Donemult == true){
                     count++;
                     }
                     break;
@@ -64,33 +62,8 @@ for(var i = 0; i < 8; i+=1){
 
 if(count == 2){
 Portal.SetActive(true);
-Called = false;
+Initialize_Planets.Called = false;
 }
 }
 }
 
-function Update () {
-	one = OneDone;
-	two = TwoDone;
-	if(OneDone == true && TwoDone == true)
-		Portal.SetActive(true);
-}
-
-function getCalled(){
-Called = Initialize_Planets.Called;
-}
-
-public static function getOneDone(){
-	return OneDone;
-}
-public static function getTwoDone(){
-	return TwoDone;
-}
-public static function setOneDone(NewValue){
-	OneDone = NewValue;
-	Debug.Log(OneDone);
-}
-public static function setTwoDone(NewValue){
-	TwoDone = NewValue;
-	Debug.Log(TwoDone);
-}
