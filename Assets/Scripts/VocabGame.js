@@ -43,6 +43,7 @@ var done = false;
 //array of the texture images
 var nums = [zero,one,two,three,four,five,six,seven,eight,nine];
 
+
 function Start () {
 	reset();
 	pickWords();
@@ -81,8 +82,14 @@ function OnGUI(){
 	if(done){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
-    		Application.LoadLevel("Locomotion");
-    		}
+			if(ActivatePortal.getOneDone == true){
+			ActivatePortal.setTwoDone(true);
+			}
+			if(ActivatePortal.getOneDone != true){
+			ActivatePortal.setOneDone(true);
+			}
+			Application.LoadLevel("Locomotion");
+			}
     	else{
     		reset();
     		wrongDelay = 0;

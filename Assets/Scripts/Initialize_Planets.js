@@ -18,20 +18,18 @@ Santron = GameObject.Find("Santron");
 
 static var Called = false;
 static var indexes = [-1,-1];
-static var OneDone = ActivatePortal.getOneDone();
-static var TwoDone = ActivatePortal.getTwoDone();
 
 function Start () {
     print("inStart");
-    //reset OneDone and TwoDone from previous level
-    OneDone = false;
-    TwoDone = false;
     //8 is number of planets
     if(Called == false){
+        //reset OneDone and TwoDone from previous level
+    //ActivatePortal.OneDone = false;
+    //ActivatePortal.TwoDone = false;
     findIndexes();
     for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
-            print("Destroyed" + i);
+            //print("Destroyed" + i);
             switch(i){
                 case 0:
                     Destroy(Xenor);
@@ -80,8 +78,8 @@ function findIndexes(){
             count++;
         }
     }
-    print(indexes[0]);
-    print(indexes[1]);
+    //print(indexes[0]);
+    //print(indexes[1]);
     return indexes;
 }
 
