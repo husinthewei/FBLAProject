@@ -1,5 +1,9 @@
 ﻿var isPause = false;
 //public var 
+ var bg : Texture;
+ var res : Texture;
+ var main : Texture;
+ var ex : Texture;
  
  function Start(){
  	Screen.SetResolution(1366,597,false);
@@ -23,24 +27,23 @@
  
  function OnGUI()
  {
-   windowRect = new Rect(20, 20, 120, 180);
-   if(isPause)
-        GUI.Window(0, windowRect, DoMyWindow, "Pause Menu");
+   if(isPause){
+		GUI.DrawTexture(Rect (0, 0, 1366, 597),bg);
+    if (GUI.Button(Rect(481, 262, 399, 90), res)){
+        isPause = false;    
+    	Time.timeScale = 1;
+    }
+
+    if (GUI.Button(Rect(481, 352, 399, 90), main)){
+    	Application.LoadLevel("Start");
+    	Time.timeScale = 1;
+    	}
+        
+    if (GUI.Button (Rect(481,442,399,90), ex)){
+        Application.Quit();
+        Time.timeScale=1;
+        }
+   }
+
  }
  
- function DoMyWindow(windowID) {
-     if (GUI.Button(new Rect(10, 20, 100, 20), "Resume Game")) {
-         isPause = false;
-         Time.timeScale = 1;
-     }
-
-     if (GUI.Button(new Rect(10, 50, 100, 20), "Back to Main"))
-         Application.LoadLevel("Start");
- 	
- 	if(GUI.Button(new Rect(10, 80, 100, 20), "Options"))
- 		print("onOptions");
- 	
- 	if(GUI.Button(new Rect(10, 110, 100, 20), "Exit Game"))
- 		Application.Quit();
- 	
- }

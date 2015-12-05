@@ -4620,6 +4620,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPause: 0
+  bg: {fileID: 2800000, guid: 87266cd9c7048614299225f7bd50d799, type: 3}
+  res: {fileID: 2800000, guid: 123318f5c15f64048807973496e35bb7, type: 3}
+  main: {fileID: 2800000, guid: aa2a9f2718f599849affa798ba3ba46e, type: 3}
+  ex: {fileID: 2800000, guid: a2fd344cdaa0ff64fa12fcb9bd8e198e, type: 3}
 --- !u!114 &991070445
 MonoBehaviour:
   m_ObjectHideFlags: 0
