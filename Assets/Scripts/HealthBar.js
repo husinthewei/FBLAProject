@@ -1,18 +1,18 @@
 ﻿#pragma strict
-static var health : float;
+
 var length : float;
 
-health = 100;
+var CurrentHealth : float;
+CurrentHealth = 0;
 
 var bar : Texture;
 var outline : Texture;
 function Start () {
-
+	CurrentHealth = 
 }
 
 function Update () {
-	if(health < 0)
-		health = 0;
+
 }
 
 function OnGUI () {
