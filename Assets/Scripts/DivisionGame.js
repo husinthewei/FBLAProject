@@ -102,6 +102,8 @@ function OnGUI () {
 			Debug.Log("You Answered All Correctly");
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
 			Donediv = true;
+			Score.score += 100;
+			Score.score += TimeRemaining;
 			if(Initialize_Planets.Dim %2 ==  1){
 			Application.LoadLevel("Dimension2");
 			}
@@ -111,7 +113,7 @@ function OnGUI () {
 		}
 		else{
 			GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
-			//reset();
+			Score.score += -50;
 			Application.LoadLevel("DivisionGame");
 		}
 	}

@@ -11,8 +11,16 @@ function Start () {
 }
 
 function Update () {
-	if(health < 0)
-		health = 0;
+	if(health <= 0){
+		Score.lives += -1;
+		health = 100;
+		if(Initialize_Planets.Dim %2 ==  1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}
+		}
 }
 
 function OnGUI () {
