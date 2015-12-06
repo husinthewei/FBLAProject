@@ -83,6 +83,8 @@ function OnGUI(){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
 			Doneunit = true;
+			Score.score += 100;
+			Score.score += TimeRemaining;
     		if(Initialize_Planets.Dim %2 == 1){
 			Application.LoadLevel("Dimension2");
 			}
@@ -112,7 +114,12 @@ function OnGUI(){
      	TimeRemaining = 59 - seconds;
      	//Exit Puzzle Button
      	if (GUI.Button(new Rect(10, 20, 100, 25), "Exit Puzzle")) 
-     	    Application.LoadLevel("Locomotion");	
+     	    if(Initialize_Planets.Dim %2 == 1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}	
      
      	//Question
      	GUI.Label (Rect (390, 200, 1500, 300), Questions[currentQuestion], labStyle);
@@ -190,6 +197,7 @@ function OnGUI(){
 		restartDelay -=1;
 		GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
 		if(restartDelay == 0){
+			Score.score += -50;
 			reset();
 			Application.LoadLevel("UnitGame");
 			}
@@ -209,7 +217,12 @@ function OnGUI(){
      TimeRemaining = 59 - seconds;
      //Exit Puzzle Button
      if (GUI.Button(new Rect(10, 20, 100, 25), "Exit Puzzle")) 
-         Application.LoadLevel("Locomotion");	
+         if(Initialize_Planets.Dim %2 == 1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}	
      
      //Question
      GUI.Label (Rect (390, 200, 1500, 300), Questions[currentQuestion], labStyle);

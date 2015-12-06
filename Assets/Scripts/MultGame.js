@@ -54,8 +54,12 @@ function OnGUI () {
     //GUI.matrix = Matrix4x4.TRS (Vector3(0, 0, 0), Quaternion.identity, Vector3 (rx, ry, 1));
 	//exit button
      if (GUI.Button(new Rect(10, 20, 100, 25), "Exit Puzzle")) {
-     
-         Application.LoadLevel("Locomotion");	
+     	if(Initialize_Planets.Dim %2 == 1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}	
      }
      
     //Checking key inputs to create the inputted answers
@@ -109,6 +113,8 @@ function OnGUI () {
 			Debug.Log("You Answered All Correctly");
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
 			Donemult = true;
+			Score.score += 100;
+			Score.score += TimeRemaining;
 			if(Initialize_Planets.Dim %2 == 1){
 			Application.LoadLevel("Dimension2");
 			}
@@ -124,6 +130,7 @@ function OnGUI () {
 	//Debug.Log(TimeRemaining);
 	if(TimeRemaining <= 0){
 		GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);
+		Score.score += -50;
 		Application.LoadLevel("MultiplicationGame");
 	}
 	
