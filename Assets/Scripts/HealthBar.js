@@ -1,8 +1,6 @@
 ﻿#pragma strict
-static var health : float;
+static var health : float = 100;
 var length : float;
-
-health = 100;
 
 var bar : Texture;
 var outline : Texture;
@@ -38,5 +36,5 @@ function OnGUI () {
 	GUI.DrawTexture(Rect (1170, -5, 200, 65),outline,ScaleMode.ScaleToFit, true);
 	GUI.DrawTexture(Rect(1178, 7, length, 25), bar, ScaleMode.StretchToFill, true);
 	
-	GUI.Label (Rect (1170, 45, 300, 300), "Health: " + parseInt(health) + "/100", GreenStyle);	
+	//GUI.Label (Rect (1170, 45, 300, 300), "Health: " + parseInt(health) + "/100", GreenStyle);	
 }

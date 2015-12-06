@@ -25,6 +25,7 @@ function Start () {
     //8 is number of planets
     if(Called != true){
     Dim++;
+    HealthBar.health = 100;
     //reset checks if games are done
     DivisionGame.Donediv = false;
     GrammarGame.Donegram = false;
