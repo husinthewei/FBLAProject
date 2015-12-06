@@ -109,8 +109,12 @@ function OnGUI () {
 			Debug.Log("You Answered All Correctly");
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
 			Donemult = true;
-			
-			Application.LoadLevel("Locomotion");	
+			if(Initialize_Planets.Dim %2 == 1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}	
 		}
 		else{
 			GUI.DrawTexture(Rect (600, 280, 200, 200),wrong);

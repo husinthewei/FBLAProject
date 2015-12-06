@@ -25,7 +25,7 @@ function Start () {
 	getCalled();
     print("inStart");
     //8 is number of planets
-    if(Called == true){
+    if(Called != false){
      for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
             //print("Destroyed" + i);
