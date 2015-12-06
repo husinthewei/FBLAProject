@@ -4294,10 +4294,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 991070436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ad4c22bfa254243a9229ab00bdad4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 83b87098df8eb4e458f2dc2180e982a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPause: 0
+  bg: {fileID: 2800000, guid: 020886b2b466c434a87e75c25231f477, type: 3}
+  res: {fileID: 2800000, guid: 76c9ad681b49ce24aa3e268a56e70be3, type: 3}
+  main: {fileID: 2800000, guid: 46fa3011710a8f1459a27cace1548a2a, type: 3}
+  ex: {fileID: 2800000, guid: 9359a62e74e40b845af3573886e7fe99, type: 3}
 --- !u!1 &1049642372
 GameObject:
   m_ObjectHideFlags: 0
