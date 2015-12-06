@@ -17,17 +17,27 @@ Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
 static var Called = false;
+static var Dim = 1;
 static var indexes = [-1,-1];
 
 function Start () {
     print("inStart");
     //8 is number of planets
-    if(Called == false){
+    if(Called != true){
+    Dim++;
+    //reset checks if games are done
+    DivisionGame.Donediv = false;
+    GrammarGame.Donegram = false;
+    MultGame.Donemult = false;
+    PercentGame.Doneper = false;
+    ScienceGame.Donesci = false;
+    VocabGame.Donevoc = false;
+    HistoryGame.Donehist = false;
+    UnitGame.Doneunit = false;
 
     findIndexes();
     for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
-            //print("Destroyed" + i);
             switch(i){
                 case 0:
                     Destroy(Xenor);

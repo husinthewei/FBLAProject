@@ -83,7 +83,12 @@ function OnGUI(){
 		if(CorrectAnswers >= 8){
 			GUI.DrawTexture(Rect (600, 280, 200, 200),check);
 			Doneunit = true;
-    		Application.LoadLevel("Locomotion");
+    		if(Initialize_Planets.Dim %2 == 1){
+			Application.LoadLevel("Dimension2");
+			}
+			else{
+			Application.LoadLevel("Locomotion");
+			}
     		}
     	else{
     		reset();
