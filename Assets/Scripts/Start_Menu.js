@@ -14,7 +14,7 @@ function DoMyWindow(windowID)
 {
 	GUI.DrawTexture(Rect(0,0,1366,597),bg);
     if (GUI.Button(Rect(481, 262, 399, 90), start))
-        Application.LoadLevel("Locomotion");
+        Application.LoadLevel("Intro");
 
     if (GUI.Button(Rect(481, 352, 399, 90), controls))
     	Application.LoadLevel("Controls");
