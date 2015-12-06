@@ -7,7 +7,7 @@ if(lives == 0){
 score = 0;
 lives = 3;
 Initialize_Planets.Dim = 1;
-Application.LoadLevel("Start");
+Application.LoadLevel("DeathScreen");
 }
 if(Initialize_Planets.Dim == 8){
 Application.LoadLevel("EndGame");
