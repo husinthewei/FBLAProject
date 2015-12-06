@@ -4,6 +4,25 @@ Portal = GameObject.Find("Portal");
 var count = 0;
 var indexes = [0,0];
 
+var Xenor : GameObject;
+var Mazka3 : GameObject;
+var Plumona : GameObject;
+var Fazeon : GameObject;
+var Vagrant : GameObject;
+var Talatia : GameObject;
+var Linithium : GameObject;
+var Santron : GameObject;
+Xenor = GameObject.Find("Xenor");
+Mazka3 = GameObject.Find("Mazka 3");
+Plumona = GameObject.Find("Plumona");
+Fazeon = GameObject.Find("Fazeon");
+Vagrant = GameObject.Find("Vagrant");
+Talatia = GameObject.Find("Talatia");
+Linithium = GameObject.Find("Linithium");
+Santron = GameObject.Find("Santron");
+
+
+
 function Start () {
 if(count!=2){
 Portal.SetActive(false);
@@ -63,6 +82,14 @@ for(var i = 0; i < 8; i+=1){
 if(count == 2){
 Portal.SetActive(true);
 Initialize_Planets.Called = false;
+Destroy(Xenor);
+Destroy(Plumona);
+Destroy(Mazka3);
+Destroy(Fazeon);
+Destroy(Linithium);
+Destroy(Santron);
+Destroy(Talatia);
+Destroy(Vagrant);
 }
 }
 }
