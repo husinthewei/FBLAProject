@@ -16,15 +16,19 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
+//variable to keep track of if Initialize_planets or Load_Planets is to be used
 static var Called = false;
+//var to keep trac of both current level, and which scene to load back into from the minigames
 static var Dim = 1;
+//array containg data on which planets were initialized
 static var indexes = [-1,-1];
 
 function Start () {
-    print("inStart");
-    //8 is number of planets
+//check if Initialized_Planets was already called
     if(Called != true){
+    //Increment the scene counter. Current level is Dim - 1
     Dim++;
+    //reset health
     HealthBar.health = 100;
     //reset checks if games are done
     DivisionGame.Donediv = false;
@@ -35,10 +39,12 @@ function Start () {
     VocabGame.Donevoc = false;
     HistoryGame.Donehist = false;
     UnitGame.Doneunit = false;
-
+    //Randomly decide which planets to be kept.
     findIndexes();
+    //8 is number of planets
     for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
+            //destroy the planets not in indexes
             switch(i){
                 case 0:
                     Destroy(Xenor);
@@ -70,8 +76,10 @@ function Start () {
 
     }
 }
+//Ensure Initialize_Planets is not called again for this level
 Called = true;
 }
+//randomly decide which planets are not destroyed
 function findIndexes(){
     var first: int;
     var second: int;
@@ -87,11 +95,10 @@ function findIndexes(){
             count++;
         }
     }
-    //print(indexes[0]);
-    //print(indexes[1]);
     return indexes;
 }
 
+//getter for static var indexes
 public static function getIndexes(){
 return indexes;
 }

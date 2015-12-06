@@ -16,19 +16,21 @@ Talatia = GameObject.Find("Talatia");
 Linithium = GameObject.Find("Linithium");
 Santron = GameObject.Find("Santron");
 
+//local var for planet data, will be set to static var from Initialize_Planets by the same name
 var indexes = [0,0];
-
+//local var for whether Initialize_Planets os Load__Planets will be called, will be set to static var from Initialize_Planets by the same name
 var Called;
 
 function Start () {
+    //set local var indexes to static var from Initialize_Planets by the same name
 	indexes = Initialize_Planets.getIndexes();
 	getCalled();
-    print("inStart");
-    //8 is number of planets
+    //if Called is not false, then Load_Planets is to be used
     if(Called != false){
+     //8 is number of planets
      for(var i = 0; i < 8; i+=1){
         if(i != indexes[0] && i != indexes[1]){
-            //print("Destroyed" + i);
+            //Destroy the planets not in indexes. indexes holds the data of the planets that were selected by Initialize_Planets for this level
             switch(i){
                 case 0:
                     Destroy(Xenor);
@@ -63,5 +65,6 @@ function Start () {
 }
 
 function getCalled(){
+//set local var Called to static var from Initialze_Planets by same name
 Called = Initialize_Planets.Called;
 }
